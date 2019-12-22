@@ -13,3 +13,5 @@ docker run -d -p 8080:8080 helloworld/envoy
 
 npx -p node-static static -p 8081
 ```
+
+http://localhost:8081/ をブラウザで開く
