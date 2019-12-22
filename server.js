@@ -73,13 +73,14 @@ function doAddChat(call, callback) {
 async function doRepeatChat(call) {
   // 接続開始時に全てのチャットの内容を取得
   call.write({
-    chat_data: chatDataList.map(({ channel, userId: user_id, text }) => ({ channel, user_id, text })),
+    chat_data: [...chatDataList].reverse()
+      .map(({ channel, userId: user_id, text }) => ({ channel, user_id, text })),
   });
 
   // 接続している間はループ、接続が切れたらループを抜ける
   while (!call.cancelled) {
     await new Promise(resolve => setTimeout(resolve, 2000));
-    call.write({ chat_data: latestChatDataList, typing_user_id: [...typingUserIds] });
+    call.write({ chat_data: [...latestChatDataList].reverse(), typing_user_id: [...typingUserIds] });
   }
 }
 
