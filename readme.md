@@ -4,7 +4,7 @@ protoc -I=. simplechat.proto \
   --grpc-web_out=import_style=commonjs,mode=grpcwebtext:generate
 
 yarn
-yarn webpack client.js --mode development
+yarn webpack
 
 node server.js #ポート9090でリッスンします
 

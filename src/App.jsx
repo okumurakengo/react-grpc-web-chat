@@ -10,7 +10,6 @@ const users = [
 ];
 
 /**
- * 参考
  * @see {@link https://github.com/bhaskarGyan/use-throttle}
  */
 function useThrottle(value, limit) {
