@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package simplechat;
+
+service ChatCaller {
+  rpc AddChat (ChatDataRequest) returns (SuccessReply);
+  rpc RepeatChat(RepeatChatRequest) returns (stream ChatListReply);
+  rpc TypingChat(TypingUserRequest) returns (SuccessReply);
+}
+
+message ChatData {
+  int32 user_id = 1;
+  string text = 3;
+}
+
+message ChatDataRequest {
+  ChatData chat_data = 1;
+}
+
+message SuccessReply {
+  bool result = 1;
+}
+
+message RepeatChatRequest {
+}
+
+message ChatListReply {
+  repeated ChatData chat_data = 1;
+  repeated int32 typing_user_id = 2;
+}
+
+message TypingUserRequest {
+  int32 user_id = 1;
+}

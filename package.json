@@ -1,0 +1,21 @@
+{
+    "name": "grpc-web-simple-example",
+    "version": "0.1.0",
+    "description": "gRPC-Web simple example",
+    "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
+        "@babel/preset-react": "^7.7.4",
+        "@grpc/proto-loader": "^0.3.0",
+        "babel-loader": "^8.0.6",
+        "css-loader": "^3.4.0",
+        "google-protobuf": "^3.6.1",
+        "grpc": "^1.15.0",
+        "grpc-web": "^1.0.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "style-loader": "^1.1.1",
+        "webpack": "^4.16.5",
+        "webpack-cli": "^3.1.0"
+    }
+}
