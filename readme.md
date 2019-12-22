@@ -1,7 +1,7 @@
 ```bash
-protoc -I=. helloworld.proto \
-  --js_out=import_style=commonjs:. \
-  --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
+protoc -I=. simplechat.proto \
+  --js_out=import_style=commonjs:generate \
+  --grpc-web_out=import_style=commonjs,mode=grpcwebtext:generate
 
 yarn
 yarn webpack client.js --mode development
